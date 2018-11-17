@@ -25,6 +25,7 @@ module.exports = function(socket){
         if(isUser(connectedUser,nickname)){
             callback({isUser:true, user:null})
         }else{
+            console.log("createUser",createUser({name:nickname}));
             callback({isUser:false,user:createUser({name:nickname})})
         }
     })
